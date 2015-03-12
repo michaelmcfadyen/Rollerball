@@ -11,13 +11,12 @@ public class EnemyMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-	
+		player = GameObject.FindGameObjectWithTag("Player").transform;
+		nav = GetComponent <NavMeshAgent> ();
 	}
 
 	void Awake()
 	{
-		player = GameObject.FindGameObjectWithTag("Player").transform;
-		nav = GetComponent <NavMeshAgent> ();
 		count = 0;
 		countText.text = "Enemy Count: 0";
 	}
@@ -47,6 +46,7 @@ public class EnemyMovement : MonoBehaviour {
 	void OnTriggerEnter(Collider other){
 		if (other.gameObject.tag == "Pickup") {
 			other.gameObject.SetActive (false);
+			Destroy(other, 1f);
 			count++;
 			countText.text = "Enemy Count: " + count.ToString ();
 		}
@@ -54,6 +54,10 @@ public class EnemyMovement : MonoBehaviour {
 
 	public int score(){
 		return count;
+	}
+
+	public void disablePathFinding(){
+		nav.SetDestination (transform.position);
 	}
 
 }
