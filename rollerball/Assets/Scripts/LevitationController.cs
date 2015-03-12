@@ -5,6 +5,7 @@ public class LevitationController : MonoBehaviour {
 
 	public float hoverForce = 12f;
 	public int delay;
+	public EnemyMovement enemyMovement;
 
 	private bool isActive;
 	private Light light;
@@ -24,15 +25,8 @@ public class LevitationController : MonoBehaviour {
 	}
 
 	void switchLevitation(){
-		if (isActive) {
-			//Turn it off
-			isActive = false;
-			light.enabled = false;
-		} else {
-			//Turn it on
-			isActive = true;
-			light.enabled = true;
-		}
+		isActive = !isActive;
+		light.enabled = !light.enabled;
 	}
 
 	void OnTriggerStay(Collider other){
