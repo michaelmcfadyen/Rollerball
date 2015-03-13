@@ -186,6 +186,10 @@ Prefab:
       propertyPath: countText
       value: 
       objectReference: {fileID: 1446375275}
+    - target: {fileID: 5476960, guid: 40449261717414e6d9b37baf3f7857f4, type: 2}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 40449261717414e6d9b37baf3f7857f4, type: 2}
   m_IsPrefabParent: 0
@@ -2049,7 +2053,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverForce: 12
-  delay: 2
+  delay: 0
+  enemyMovement: {fileID: 625572029}
 --- !u!65 &1741031747
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2171,6 +2176,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11471934, guid: 9bed6202a987f479fa86e5aaa361d52b, type: 2}
+      propertyPath: enemyMovement
+      value: 
+      objectReference: {fileID: 625572029}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bed6202a987f479fa86e5aaa361d52b, type: 2}
   m_IsPrefabParent: 0
