@@ -14,6 +14,7 @@ public class PlayerHealth : MonoBehaviour {
 	public EnemyMovement enemyScript;
 	public PlayerMovement playerMovement;
 	public int enemyDamage;
+	public int winningScore;
 
 	private int health;
 	private int count;
@@ -32,19 +33,21 @@ public class PlayerHealth : MonoBehaviour {
 
 			disableMovement();
 
-			if(health <= 0)
+			updateGameOverText("GAME OVER!");
+
+			/*if(health <= 0)
 				updateGameOverText(LOSE_MESSAGE);
 			else if(isDraw())
 				updateGameOverText(DRAW_MESSAGE);
 			else if(!hasWon())
 				updateGameOverText(LOSE_MESSAGE);
 			else
-				updateGameOverText(WIN_MESSAGE);
+				updateGameOverText(WIN_MESSAGE);*/
 		}
 	}
 
 	public bool isGameOver() {
-		return GameObject.FindGameObjectsWithTag ("Pickup").Length <= 0 || health <= 0;
+		return GameObject.FindGameObjectsWithTag ("Pickup").Length <= 0 || health <= 0 || count >= winningScore;
 	}
 	
 	public bool hasWon(){

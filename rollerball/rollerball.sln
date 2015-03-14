@@ -1,6 +1,8 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
 
+Project("{6B2D29AC-1497-7602-5729-30A613A43AA0}") = "rollerball", "Assembly-CSharp-firstpass.csproj", "{319C54E6-C52A-C1EE-A0ED-1FCAA21925CA}"
+EndProject
 Project("{6B2D29AC-1497-7602-5729-30A613A43AA0}") = "rollerball", "Assembly-CSharp.csproj", "{DDF069BF-5951-377C-6EDE-8B6E95974392}"
 EndProject
 Global
@@ -9,6 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{319C54E6-C52A-C1EE-A0ED-1FCAA21925CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{319C54E6-C52A-C1EE-A0ED-1FCAA21925CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{319C54E6-C52A-C1EE-A0ED-1FCAA21925CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{319C54E6-C52A-C1EE-A0ED-1FCAA21925CA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DDF069BF-5951-377C-6EDE-8B6E95974392}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DDF069BF-5951-377C-6EDE-8B6E95974392}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDF069BF-5951-377C-6EDE-8B6E95974392}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -17,7 +23,7 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																											GlobalSection(MonoDevelopProperties) = preSolution
+																																																				GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
